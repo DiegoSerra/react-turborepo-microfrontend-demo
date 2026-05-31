@@ -11,7 +11,9 @@ export default defineConfig(() => {
     },
     build: {
       target: "chrome89",
+      outDir: "../dist/remote-2",
     },
+    base: "/remote-2/",
     plugins: [
       rnw(),
       federation({

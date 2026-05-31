@@ -10,6 +10,12 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", "*.tsbuildinfo"]
     },
+    "react-remote#build": {
+      "dependsOn": ["react-host#build"]
+    },
+    "react-remote-2#build": {
+      "dependsOn": ["react-host#build"]
+    },
     "preview": {
       "cache": false,
       "persistent": true

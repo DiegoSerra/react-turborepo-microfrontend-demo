@@ -6,13 +6,13 @@ export default defineConfig(() => ({
   server: { fs: { allow: [".", "..", "../shared"] } },
   build: {
     target: "chrome89",
+    outDir: "../dist",
   },
   plugins: [
     rnw(),
     federation({
       dts: true,
       name: "host",
-      exposes: {},
       filename: "remoteEntry.js",
       shared: {
         react: { singleton: true },
