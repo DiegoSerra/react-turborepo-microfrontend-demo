@@ -4,8 +4,7 @@
   "tasks": {
     "dev": {
       "cache": false,
-      "persistent": true,
-      "dependsOn": ["^build"]
+      "persistent": true
     },
     "build": {
       "dependsOn": ["^build"],
@@ -13,8 +12,7 @@
     },
     "preview": {
       "cache": false,
-      "persistent": true,
-      "dependsOn": ["build"]
+      "persistent": true
     },
     "typecheck": {
       "cache": false

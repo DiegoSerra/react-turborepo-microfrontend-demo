@@ -1,7 +1,5 @@
 packages:
   - host
   - remote
-  - shared-ui
-
-catalog:
-  "@module-federation/vite": ^1.15.4
+  - remote-2
+  - packages/shared/*

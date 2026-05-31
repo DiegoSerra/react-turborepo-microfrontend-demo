@@ -8,13 +8,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mf-vite-example/shared-ui": "workspace:*",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "rxjs": "^7.8.2"
+    "react-native-web": "~0.21.1",
+    "rxjs": "^7.8.2",
+    "vite-plugin-rnw": "^0.0.10"
   },
   "devDependencies": {
-    "@module-federation/vite": "catalog:",
+    "@module-federation/vite": "^1.16.1",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.1.4",

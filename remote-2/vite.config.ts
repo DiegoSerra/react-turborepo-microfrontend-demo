@@ -17,9 +17,10 @@ export default defineConfig(() => {
       federation({
         dts: true,
         filename: "remoteEntry.js",
-        name: "remote",
+        name: "remote-2",
         exposes: {
           "./remote-app": "./src/App.tsx",
+          "./counter": "./src/components/Counter.tsx",
         },
         remotes: {},
         shared: {

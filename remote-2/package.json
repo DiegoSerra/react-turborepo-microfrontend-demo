@@ -1,10 +1,10 @@
 {
-  "name": "react-remote",
+  "name": "react-remote-2",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 4174",
+    "dev": "vite --port 4175",
     "build": "tsc && vite build",
-    "preview": "vite preview --port 4174",
+    "preview": "vite preview --port 4175",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

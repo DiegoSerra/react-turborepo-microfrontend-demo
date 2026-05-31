@@ -1,29 +1,32 @@
 {
+  "include": ["src", "vite.config.ts", "./@mf-types/*"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
+    "paths": {
+      "@/": ["./src/*"],
+      "*": ["./@mf-types/*"]
+    },
+    "jsx": "react-jsx",
+    "declaration": false,
+    "declarationMap": false,
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
+    "lib": ["ESNext", "DOM"],
+    "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "shared": ["../shared/shared.ts"]
-    }
-  },
-  "include": ["src"],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "composite": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true
+  }
 }

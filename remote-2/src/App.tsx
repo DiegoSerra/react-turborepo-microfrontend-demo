@@ -9,13 +9,13 @@ export default () => {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   
   useEffect(() => {
-    console.log("Remote useEffect");
+    console.log("Remote 2 useEffect");
   }, []);
 
   return (
     <div
       style={{
-        background: "#1f2124",
+        background: "#3ff07a",
         boxShadow: "0 0 20px rgba(0, 0, 0, 0.4)",
         borderRadius: "5px",
         margin: "20px 20px 20px 20px",
@@ -44,9 +44,9 @@ export default () => {
           />
         </svg>
       </div>
-      <div style={{ marginTop: "10px", fontSize: "25px" }}>I'm the remote app {isDesktop ? 'on desktop' : 'on mobile'}</div>
+      <div style={{ marginTop: "10px", fontSize: "25px" }}>I'm the remote 2 app {isDesktop ? 'on desktop' : 'on mobile'}</div>
       <Counter />
-      <Button>shared ui from remote</Button>
+      <Button>shared ui from remote 2</Button>
       <Footer />
     </div>
   );

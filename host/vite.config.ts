@@ -1,7 +1,6 @@
 import { federation } from "@module-federation/vite";
-import react from "@vitejs/plugin-react";
+import { rnw } from "vite-plugin-rnw";
 import { defineConfig } from "vite";
-import { dependencies } from "./package.json";
 
 export default defineConfig(() => ({
   server: { fs: { allow: [".", "..", "../shared"] } },
@@ -9,35 +8,20 @@ export default defineConfig(() => ({
     target: "chrome89",
   },
   plugins: [
+    rnw(),
     federation({
       dts: true,
-      dev: { disableDynamicRemoteTypeHints: true, remoteHmr: true },
       name: "host",
-      remotes: {
-        remote: {
-          type: "module",
-          name: "remote",
-          entry: "http://localhost:4174/remoteEntry.js",
-          entryGlobalName: "remote",
-          shareScope: "default",
-        },
-      },
       exposes: {},
       filename: "remoteEntry.js",
       shared: {
-        "@mf-vite-example/shared-ui": {
-          singleton: true,
-        },
-        react: {
-          requiredVersion: dependencies.react,
-          singleton: true,
-        },
-        "react-dom": {
-          requiredVersion: dependencies["react-dom"],
-          singleton: true,
-        },
+        react: { singleton: true },
+        "react-dom": { singleton: true },
+        "react-native-web": { singleton: true },
+        "@repo/core": { singleton: true },
+        "@repo/ui": { singleton: true },
+        "@repo/components": { singleton: true },
       },
     }),
-    react(),
   ],
 }));

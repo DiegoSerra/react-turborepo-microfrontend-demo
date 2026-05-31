@@ -3,11 +3,6 @@
   "description": "Module Federation Vite + React + Turborepo is now possible",
   "private": true,
   "packageManager": "pnpm@10.28.2",
-  "workspaces": [
-    "host",
-    "remote",
-    "shared-ui"
-  ],
   "scripts": {
     "dev": "turbo run dev",
     "dev:filter": "turbo run dev --filter",
@@ -16,6 +11,12 @@
     "preview": "turbo run preview",
     "preview:filter": "turbo run preview --filter",
     "typecheck": "turbo run typecheck"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "@repo/components": "workspace:*",
+    "@repo/core": "workspace:*",
+    "@repo/hooks": "workspace:*"
   },
   "devDependencies": {
     "turbo": "^2.9.12"
